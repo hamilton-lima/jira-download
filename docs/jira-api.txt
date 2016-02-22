@@ -1,0 +1,39 @@
+jira api anotations
+
+** set the project rights at 
+https://DOMAIN.atlassian.net/plugins/servlet/project-config/PFE/roles
+- add users to a role / user = backup / role = ATLASSIAN-ADDONS-PROJECT-ACCESS
+
+
+login
+https://docs.atlassian.com/jira/REST/latest/#auth/1/session-login
+
+EXAMPLE
+{
+    "username": "fred",
+    "password": "freds_password"
+}
+
+
+GET /rest/api/2/search
+use JQL para read all the issues from a project
+https://confluence.atlassian.com/jira/advanced-searching-179442050.html
+
+url example to use on GET 
+http://DOMAIN/rest/api/2/search?jql=project=ROBO
+
+
+GET /rest/api/2/issue/{issueIdOrKey}
+
+** atention on how to read "changelog" 
+...
+ "attachment": [
+            {
+                "self": "http://www.example.com/jira/rest/api/2.0/attachments/10000",
+                "filename": "picture.jpg",
+
+GET /rest/api/2/issue/{issueIdOrKey}/comment
+
+
+GET /rest/api/2/user
+
